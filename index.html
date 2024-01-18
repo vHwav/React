@@ -5,43 +5,42 @@
     <link rel="icon" href="/assets/favicon.svg" />
     <title>리액트 펀더멘탈</title>
     <script type="module">
-      //   const subject = document.querySelector("h1");
-      //   const content = document.querySelector("#app p");
-      //   function rendering() {
-      //     setTimeout(() => {
-      //       subject.textContent = "리액트로 ";
-      //       content.textContent = "들어가봅시다";
-      //     }, 1000);
-      //   }
-      //   rendering();
-      //JavaScript 실습
-      //1.데이터 분리 후 선언
-      const appData = {
-        headline: "리액트",
-        paragraph:
-          "리액트는 사용자 인터페이스 구축을 위한 JavaScript 오픈소스 라이브러리입니다.",
-      };
+      import {
+        createElement as h /*hyper script*/,
+      } from "https://esm.sh/react";
+      //   import ReactDOM from "https://esm.sh/react-dom";
+      import { createRoot } from "https://esm.sh/react-dom";
 
-      //문서(DOM)에서 대상(요소) 찾기
-      const appElement = document.getElementById("app");
-      // 2. 동적 렌더링
-      function render() {
-        const h1Element = document.createElement("h1");
-        const pElement = document.createElement("p");
-        //데이터 바인딩
-        h1Element.textContent = appData.headline;
-        pElement.textContent = appData.paragraph;
+      //리액트 앨리먼트 생성하기
+      const h1Element = h("h1", {}, "리액트");
+      const pElement = h(
+        "p",
+        {},
+        "리액트는 사용자 인터페이스 구축을 위한 JavaScript 오픈소스 라이브러리입니다."
+      );
+      const appElement = h("div", { id: "app" }, h1Element, pElement);
 
-        //화면에 렌더링
-        appElement.append(h1Element, pElement);
-      }
-      render();
+      //리액트 돔 객체의 렌더 메서드로 리액트 엘리먼트 DOM에 렌더링하기
+      createRoot(document.getElementById("root")).render(appElement);
+
+      //   const h1Element = createElement("h1", {}, "리액트");
+      //   const pElement = createElement(
+      //     "p",
+      //     {},
+      //     "리액트는 사용자 인터페이스 구축을 위한 JavaScript 오픈소스 라이브러리입니다."
+      //   );
+      //   console.log(h1Element);
+      //   console.log(pElement);
+      //   const reactDOMroot = createRoot(document.getElementById("app"));
+      //   console.log(reactDOMroot);
+      //   reactDOMroot.render(h1Element);
     </script>
   </head>
   <body>
-    <div id="app">
-      <!-- <h1></h1>
-      <p></p> -->
-    </div>
+    <!-- 바닐라에서는 마크업을 HTML로 했고, -->
+    <!-- 리액트에서는 자바스크립트로 마크업을 합니다 -->
+    <noscript>이 앱은 자바스크립트의 활성화를 필요로 합니다</noscript>
+    <!-- ctrl+shift+p disable JavaScript > 자바스크립트 비활성화로 볼 수 있음  -->
+    <div id="root"></div>
   </body>
 </html>
