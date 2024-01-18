@@ -14,7 +14,7 @@ const StrongElement = h("strong", {}, "fundamental");
 const appElement = h("div", { id: "app" }, StrongElement, h1Element, pElement);
 
 //리액트 돔 객체의 렌더 메서드로 리액트 엘리먼트 DOM에 렌더링하기
-createRoot(document.getElementById("root")).render(appElement);
+const root = createRoot(document.getElementById("root")).render(appElement);
 
 //   const h1Element = createElement("h1", {}, "리액트");
 //   const pElement = createElement(
@@ -27,3 +27,9 @@ createRoot(document.getElementById("root")).render(appElement);
 //   const reactDOMroot = createRoot(document.getElementById("app"));
 //   console.log(reactDOMroot);
 //   reactDOMroot.render(h1Element);
+
+// getOutReact-button 버튼 클릭 이벤트 핸들링
+document.querySelector(".getOutReact_button").addEventListener("click", () => {
+  console.log("getOut react");
+  root.unmount();
+});
