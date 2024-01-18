@@ -18,5 +18,5 @@ root.render(appElement);
 // BEM 표기법
 const getOutButton = document.querySelector(".getOutReact_button");
 getOutButton.addEventListener("click", () => {
-  unmount(appElement);
+  root.unmount(appElement);
 });

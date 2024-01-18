@@ -9,7 +9,14 @@
     />
     <link rel="stylesheet" href="/main.css" />
     <title>리액트 펀더멘탈</title>
-    <script type="module" src="/lecture/05-like-a-react.js"></script>
+    <script
+      src="https://unpkg.com/@babel/standalone/babel.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/babel">
+      const getRandom = (n) => Math.floor(Math.random() * n + 1);
+    </script>
+    <script type="module" src="/lecture/06-jsx-syntax.js"></script>
   </head>
   <body>
     <!-- 바닐라에서는 마크업을 HTML로 했고, -->
