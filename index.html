@@ -21,14 +21,27 @@
         paragraph:
           "리액트는 사용자 인터페이스 구축을 위한 JavaScript 오픈소스 라이브러리입니다.",
       };
-      console.log(appData);
+
+      //문서(DOM)에서 대상(요소) 찾기
+      const appElement = document.getElementById("app");
       // 2. 동적 렌더링
+      function render() {
+        const h1Element = document.createElement("h1");
+        const pElement = document.createElement("p");
+        //데이터 바인딩
+        h1Element.textContent = appData.headline;
+        pElement.textContent = appData.paragraph;
+
+        //화면에 렌더링
+        appElement.append(h1Element, pElement);
+      }
+      render();
     </script>
   </head>
   <body>
     <div id="app">
-      <h1></h1>
-      <p></p>
+      <!-- <h1></h1>
+      <p></p> -->
     </div>
   </body>
 </html>
