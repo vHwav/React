@@ -1,29 +1,21 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko-KR">
   <head>
-    <meta content="charset=UTF-8" />
-    <link rel="icon" href="/assets/favicon.svg" />
+    <meta charset="UTF-8" />
+    <title>리액트 펀더멘탈</title>
+    <link rel="icon" href="/favicon.svg" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/variable/woff2/SUIT-Variable.css"
     />
-    <link rel="stylesheet" href="/main.css" />
-    <title>리액트 펀더멘탈</title>
-    <script
-      src="https://unpkg.com/@babel/standalone/babel.min.js"
-      crossorigin="anonymous"
-    ></script>
-    <script type="text/babel">
-      const getRandom = (n) => Math.floor(Math.random() * n + 1);
-    </script>
-    <script type="module" src="/lecture/06-jsx-syntax.js"></script>
+    <link rel="stylesheet" href="/src/styles/main.css" />
+    <script type="module" src="/src/main.jsx"></script>
   </head>
   <body>
-    <!-- 바닐라에서는 마크업을 HTML로 했고, -->
-    <!-- 리액트에서는 자바스크립트로 마크업을 합니다 -->
-    <noscript>이 앱은 자바스크립트의 활성화를 필요로 합니다</noscript>
-    <!-- ctrl+shift+p disable JavaScript > 자바스크립트 비활성화로 볼 수 있음  -->
+    <noscript>이 앱을 사용하려면 자바스크립트 활성화가 필요합니다.</noscript>
+
     <div id="root"></div>
-    <button type="button" class="getOutReact_button">리액트 나가~!</button>
+
+    <button type="button" class="getOutReact__button">리액트 나가~</button>
   </body>
 </html>
