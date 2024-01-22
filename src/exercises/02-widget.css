@@ -1,0 +1,53 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+:root{
+    /* Color styles */
+    --white: rgba(255, 255, 255, 1);
+    --gray--100: rgba(188, 195, 199, 1);
+    --gray--500: rgba(109, 116, 120, 1);
+    --gray--950: rgba(4, 4, 4, 1);
+    --green--100: rgba(3, 204, 92, 1);
+    --blue--100: rgba(1, 169, 255, 1);
+    --blue--200: rgba(66, 132, 247, 1);
+
+    /* Effect styles */
+    --shadow--100:  0px 4px 4px rgba(68, 131, 63, 0.15);
+}
+
+body {
+    background-color: #f3f6f8;
+    font-family: 'Pretendard-Regular';
+}
+
+.widget_box {
+    border-radius: 6px;
+    box-sizing: border-box;
+    border: 1px solid #EBEBEA;
+    background: var(--gradient-300, linear-gradient(99deg, #FFF 29.16%, #F4F4F4 93.35%));
+    box-shadow: 0px 4px 4px 0px rgba(181, 181, 181, 0.15);
+    display: flex;
+    block-size: 72px;
+    inline-size: 200px;
+    padding: 16px 8px 16px 16px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
+    flex: 1;
+
+    .text_box{
+        color: var(--gray-500, #6D7478); 
+        flex: 1;
+    }
+    p{
+        margin: 0;
+        font-size: 12px;
+        letter-spacing: -0.2px;
+        
+    }
+    .temperature {
+        color: var(--gray-950, #040404);
+        font-size: 20px;
+        font-weight: 900;
+        letter-spacing: 0.2px;
+        line-height: 100%;
+    }
+}
